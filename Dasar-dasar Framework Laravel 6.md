@@ -179,3 +179,254 @@
     c.	return get('majalah.pagination');
     
     d.	Semua Salah
+    
+# Routing Di Laravel
+## Mengenal Routing
+19.	File routing yang digunakan untuk membuat sebuah halaman website bernama...
+    **a.	web.php**
+    
+    b.	console.php
+    
+    c.	channel.php
+    
+    d.	api.php
+    
+20. Default routing yang disediakan laravel 6 pada web.php adalah...
+
+```
+    a.	Route::post('/', function (){
+            return view('welcome');
+         });
+    
+    b.	Route::get('/', function (){
+            return ('welcome');
+         });
+    
+    **c.	Route::get('/', function (){
+            return view('welcome');
+         });**
+    
+    d.	Route::put('/', function (){
+            return view('welcome');
+         });
+```
+    
+21. Method untuk mengambil/menampilkan data pada routing adalah dengan...
+
+    a.	post
+    
+    **b.	get**
+    
+    c.	put
+    
+    d.	delete
+## Parameter pada Route
+22. Fungsi dari route parameter adalah...
+
+    a.	Untuk menampilkan web dengan cepat
+    
+    b.	Untuk membuat data lebih tertatarapih di database
+    
+    **c.	Untuk menampilkan data berdasarkan parameter tertentu seperti id atau username**
+    
+    d.	Untuk menampilkan langsung semua data yang ada pada database 
+    
+23. Contoh dari pembuatan routing parameter pada laravel...
+```
+
+    a.	Route::get('/', function (){
+            return view('welcome');
+         });
+    
+    **b.	Route::get('/user/{id}', function ($id){
+            return 'user ' . $id;
+         });**
+    
+    c.	Route::get('/user/{id}', function (){
+            return 'user ' . $id;
+         });
+    
+    d.	Route::post('/user/id', function ($id){
+            return 'user ' . $id;
+         });
+```
+    
+24. Contoh dari pembuatan routing parameter yang mana parameter tersebut menjadi optional atau bisa tidak diisi pada laravel...
+```
+
+    **a.	Route::get('/user/{id?}', function ($id = null){
+            return 'user ' . $id;
+         });**
+    
+    b.	Route::get('/user/{id}', function ($id = null){
+            return 'user ' . $id;
+         });
+    
+    c.	Route::get('/user/{id?}', function ($id){
+            return 'user ' . $id;
+         });
+    
+    d.	Route::get('/user/{id}', function ($id){
+            return 'user ' . $id;
+         });
+```
+         
+## Route Group
+25. Contoh dari penulisan route group pada laravel...
+```
+
+    a.	Route::get('/user/{id}', function ($id){
+            return 'user ' . $id;
+         });
+    
+    **b.	Route::prefix('user')->group(function(){
+               Route::get('/change-password', function (){
+                  return 'change-password';
+               });
+         });**
+    
+    c.	Route::prefix('user'){
+               Route::get('/change-password', function (){
+                  return 'change-password';
+               });
+         });
+    
+    d.	Route::get('user')->group(function(){
+               Route::get('/change-password', function (){
+                  return 'change-password';
+               });
+         });
+```
+    
+26. Fungsi dari route group pada laravel adalah
+
+    **a.	Untuk mengumpulkan route yang memiliki prefix yang sama**
+    
+    b.	Untuk memisahkan route yang memiliki prefix yang sama
+    
+    c.	Untuk menghapus route yang memiliki prefix yang sama
+    
+    d.	Untuk mengedit route yang memiliki prefix yang sama
+    
+27. Apakah bisa kita membuat route group di dalam route group...
+
+    a.	Tidak bisa
+    
+    **b.	Ya, bisa**
+    
+## Route Alias Name
+28. Apa fungsi dari menggunakan alias name pada routing laravel...
+
+    a.	memperumit codingan
+    
+    b.	mempersulit dalam memanggil url pada website
+    
+    **c.	mempermudah atau mempersingkat url yang bisa kita panggil nantinya**
+    
+    d.	semua salah
+    
+29. Contoh dari pembuatan alias name pada routing laravel...
+```
+
+    a.	Route::get('homapage/landing-page', function (){
+            return 'landing';
+         })->nama('homepage');
+    
+    **b.	Route::get('homapage/landing-page', function (){
+            return 'landing';
+         })->name('homepage');**
+    
+    c.	Route::get('homapage/landing-page', function (){
+            return 'landing';
+         })->alias('homepage');
+    
+    d.	Route::get('homapage/landing-page', function (){
+            return 'landing';
+         })->names('homepage');
+```
+    
+30. Contoh dari code pemanggilan alias name pada routing laravel...
+```
+
+    **a.	Route::get('redirect', function (){
+            return redirect()->route('homepage');
+         });**
+    
+    b.	Route::get('redirect', function (){
+            return redirect()->name('homepage');
+         });
+    
+    c.	Route::get('redirect', function (){
+            return redirect()->middleware('homepage');
+         });
+    
+    d.	Route::get('redirect', function (){
+            return redirect()->alias('homepage');
+         });
+```
+
+## Route Resource dan API Resource
+31. Apa fungsi dari route resource pada laravel...
+
+    a.	memperumit codingan
+    
+    **b.	Untuk mempermudah dalam pembuatan routing untuk CRUD**
+    
+    c.	Untuk mempersulit dalam pembuatan routing untuk CRUD
+    
+    d.	semua salah
+    
+32. Contoh dari pembuatan route resource pada laravel...
+```
+
+    **a.	Route::resource('article', 'ArticleController');**
+    
+    b.	Route::get('article', 'ArticleController');
+    
+    c.	Route::post('article', 'ArticleController');
+    
+    d.	Route::delete('article', 'ArticleController');
+```
+    
+33. Contoh dari perintah artisan dalam membuat controller untuk sebuah route resource yang telah kita buat...
+
+    a.	php artisan make:controller ArticleController --route
+    
+    b.	php artisan controller:make ArticleController --resource
+    
+    **c.	php artisan make:controller ArticleController --resource**
+    
+    d.	php artisan make:controller ArticleController
+    
+34. Contoh dari pembuatan route resource pada laravel...
+```
+
+    a.	Route::apiRoute('article', 'ArticleController');
+    
+    **b.	Route::apiResource('article', 'ArticleController');**
+    
+    c.	Route::resource('article', 'ArticleController');
+    
+    d.	Route::api('article', 'ArticleController');
+```
+    
+## Route View dan Redirect
+35. Apa fungsi dari route view...
+
+    a.	Untuk mengalihkan sebuah halaman ke halaman yang kita inginkan
+    
+    **b.	Untuk menampilkan sebuah view dari file yang ingin kita tampilkan**
+    
+    c.	Untuk mempermudah dalam pembuatan route lain
+    
+    d.	Untuk Menampilkan route list
+    
+36. Apa fungsi dari route redirect...
+
+    **a.	Untuk mengalihkan atau meredirect sebuah halaman ke halaman yang kita inginkan**
+    
+    b.	Untuk menampilkan sebuah view dari file yang ingin kita tampilkan
+    
+    c.	Untuk mempermudah dalam pembuatan route lain
+    
+    d.	Untuk Menampilkan route list
