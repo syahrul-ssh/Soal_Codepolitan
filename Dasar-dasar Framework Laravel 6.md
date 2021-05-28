@@ -430,3 +430,128 @@
     c.	Untuk mempermudah dalam pembuatan route lain
     
     d.	Untuk Menampilkan route list
+
+# Menggunakan Controller dan View
+## Mengenal Controller
+37. Perintah artisan untuk membuat sebuah controller adalah...
+
+    a.	php artisan controller:make HomeController
+    
+    **b.	php artisan make:controller HomeController**
+    
+    c.	php artisan controller HomeController
+    
+    d.	php artisan makes:controller HomeController
+
+38. Apa fungsi dari sebuah controller pada laravel...
+
+    a.	Sebagai penghubung antara route dan resource
+    
+    b.	Sebagai penghubung antara config dan database
+    
+    **c.	Sebagai penghubung antara model dan view**
+    
+    d.	semua salah
+
+39. Contoh pembuatan route untuk controller pada laravel... 
+
+    **a.	Route::get('user', 'HomeController@index')->name('user');**
+    
+    b.	Route::get('user', 'HomeController')->name('user');
+    
+    c.	Routes::get('user', 'HomeController@index')->name('user');
+    
+    d.	Route::get('user', '@index')->name('user');
+    
+## Controller Object Request
+40. Class apa yang akan selalu di import saat membuat controller menggunakan artisan...
+
+    a.	use Http\Illuminate\Request;
+    
+    b.	use Request\Http\Illuminate;
+    
+    c.	use Http\Request\Illuminate;
+    
+    **d.	use Illuminate\Http\Request;**
+
+41. Fungsi dari class request pada controller laravel adalah...
+
+    a.	Menggantikan fungsi controller
+    
+    **b.	Menggantikan fungsi global GET dan POST**
+    
+    c.	Membuat web menjadi cepat
+    
+    d.	Semua salah
+
+42. Salah satu contoh code dalam mengambil parameter dengan request...
+
+    a.	echo $request->post('nama');
+    
+    b.	echos $request->get('nama');
+    
+    **c.	echo $request->get('nama');**
+    
+    d.	Semua salah
+    
+## Controller untuk Submit Form
+43. Contoh pembuatan route post untuk controller pada laravel... 
+
+    a.	Routes::post('user', 'HomeController@index')->name('user');
+    
+    b.	Route::post('user', 'HomeController')->name('user');
+    
+    **c.	Route::post('user', 'HomeController@index')->name('user');**
+    
+    d.	Route::post('user', '@index')->name('user');	
+
+44. Error apa yang akan kita temui saat kita memasukan isian form dan kita belum melakukan exception pada middleware...
+
+    a.	404|Not Found
+    
+    b.	410|Gone
+    
+    **c.	419|Page Expired**
+    
+    d.	408|Request Timeout
+
+45. Pada saat melakukan exception di folder middleware untuk form kita, di file manakah kita melakukan exception...
+
+    a.	Authenticate.php
+    
+    **b.	VerifyCsrfToken.php**
+    
+    c.	EncryptCookies.php
+    
+    d.	TrimStrings.php
+
+## Menggunakan View
+46. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
+
+47. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
+
+48. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
