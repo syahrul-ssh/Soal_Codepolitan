@@ -526,32 +526,108 @@
     d.	TrimStrings.php
 
 ## Menggunakan View
-46. 
+46. Contoh code untuk menampilkan sebuah view dari controller pada laravel...
 
-    a.	
+    a.	return user;
     
-    b.	
+    b.	return (user.index);
     
-    c.	
+    **c.	return view('user.index');**
     
-    d.	
+    d.	return ('user.index');
 
-47. 
+47. Contoh code untuk menampilkan sebuah view dari controller dengan mempassing data pada laravel...
 
-    a.	
+    a.	return user;
     
-    b.	
+    b.	return (user.index)->with('username', $username);;
     
-    c.	
+    c.	return view('user.index');
     
-    d.	
+    **d.	return view('user.index')->with('username', $username);**
 
-48. 
+48. Contoh code untuk menampilkan sebuah view dari controller dengan menggunakan array data pada laravel...
+```
 
-    a.	
+    a.	return (user, [
+            'username' => $username,
+            'fullname' => 'Amirul Ihsan'
+         ]);
     
-    b.	
+    **b.	return view('user.index', [
+            'username' => $username,
+            'fullname' => 'Amirul Ihsan'
+         ]);**
     
-    c.	
+    c.	return ('user.index', [
+            'username' => $username,
+            'fullname' => 'Amirul Ihsan'
+         ]);
     
-    d.	
+    d.	return (user.index, [
+            'username' => $username,
+            'fullname' => 'Amirul Ihsan'
+         ]);
+```
+
+## Kustomisasi Halaman Error
+49. Error apa yang akan kita temui saat kita memasukan url yang belum terdaftar pada route milik kita...
+
+    **a.	404|Not Found**
+    
+    b.	410|Gone
+    
+    c.	419|Page Expired
+    
+    d.	408|Request Timeout	
+
+50. kita bisa mengkostumisasi halaman error dengan...
+
+    a.	Membuatnya langsung dari route
+    
+    b.	Membuatnya dari controller
+    
+    **c.	Membuat sebuah folder di view dengan nama errors dan membuat file sesuai code errornya**
+    
+    d.	Semua salah
+
+## Kustomisasi Halaman Error
+51. Apa singkatan dari csrf...
+
+    a.	Cross Site Scripting
+    
+    **b.	Cross-site Request Forgery**
+    
+    c.	Structured Query Language
+    
+    d.	Hyper Text Transfer Protocol
+
+52. Serangan csrf adalah..
+
+    a.	Serangan terhadap server website
+    
+    b.	Serangan yang menggunakan malware ke website
+    
+    c.	Serangan yang membuat hacker dapat mengetahui komunikasi antara website kita dengan server
+    
+    **d.	Serangan dari website lain kepada website milik kita dengan menggunakan submit form**
+
+53. Ada berapa cara dalam menuliskan csrf_token pada video materi tentang perlindungan csrf... 
+
+    a.	1
+    
+    b.	2
+    
+    **c.	3**
+    
+    d.	4	
+
+54. Manakah salah satu contoh code dalam membuat csrf_token...
+
+    a.	return view('user.index');
+    
+    **b.	@csrf**
+    
+    c.	Route::post('user', 'HomeController@index')->name('user');
+    
+    d.	echo $request->get('nama');
