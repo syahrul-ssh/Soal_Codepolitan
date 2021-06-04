@@ -631,3 +631,134 @@
     c.	Route::post('user', 'HomeController@index')->name('user');
     
     d.	echo $request->get('nama');
+
+# Dasar-Dasar Vallidasi Form
+## Mengenal Validasi Form
+55.	Contoh code pada laravel untuk membuat validasi form...
+```
+
+    **a.	$this->validate($request, [
+            'email' => 'required'
+         ]);**
+    
+    b.	$this->validation($request, [
+            'email' => 'required'
+         ]);
+    
+    c.	$this->validate([
+            'email' => 'required'
+         ]);
+    
+    d.	$this->validate(request, [
+            'email' => 'required'
+         ]);
+```
+
+    
+56. Pada video materi Mengenal Validasi Form apa yang terjadi pada form yang tidak di isi dan tidak ada validasi didalamnya...
+
+    a.	akan kembali menampilkan form
+    
+    b.	membuat website menjadi error
+    
+    **c.	akan menampilkan data null**
+    
+    d.	semua salah
+    
+57. Pada video materi Mengenal Validasi Form apa yang terjadi pada form yang tidak di isi dan kita telah mensetting validasi di project kita ...
+
+    **a.	akan kembali menampilkan form**
+    
+    b.	membuat website menjadi error
+    
+    c.	akan menampilkan data null
+    
+    d.	semua salah
+
+## Kustomisasi Pesan Error pada Validasi
+58.	Contoh code pada laravel untuk membuat kustomisasi pesan error pada validasi form...
+```
+
+    a.	$this->validation($request, [
+            'email' => 'required|email'
+         ], [
+            'required => 'Harus Diisi'
+            'email' => 'Kami membutuhkan email yang valid'
+         ]);
+    
+    b.	$this->validate([
+            'email' => 'required|email'
+         ], [
+            'required => 'Harus Diisi'
+            'email' => 'Kami membutuhkan email yang valid'
+         ]);
+    
+    c.	$this->validate(request, [
+            'email' => 'required|email'
+         ], [
+            'required => 'Harus Diisi'
+            'email' => 'Kami membutuhkan email yang valid'
+         ]);
+    
+    **d.	$this->validate($request, [
+            'email' => 'required|email'
+         ], [
+            'required => 'Harus Diisi'
+            'email' => 'Kami membutuhkan email yang valid'
+         ]);**
+```
+
+    
+59. Kita bisa mengcustom pesan error agar bisa dinamis mengikuti dari nama atributnya dengan cara menambahkan...
+
+    a.	:validate pesan error
+    
+    **b.	:attribute pesan error**
+    
+    c.	:accept pesan error
+    
+    d.	semua salah
+    
+60. Selain kita bisa mengkustomisasi pesan error form validation langsung dari controller, kita juga bisa mengkustomisasi pesan error form validation dari...
+
+    **a.	validation.php**
+    
+    b.	passwords.php
+    
+    c.	pagination.php
+    
+    d.	auth.php
+    
+## Validasi Form dengan Gaya Bootstrap
+61.	contoh implementasi penulisan class is-invalid pada validasi menggunakan bootstrap di laravel...
+```
+
+    **a.	{{ $errors->has('email') ? 'is-invalid' : '' }}**
+    
+    b.	{{ errors->has('email') ? 'is-invalid' : '' }}
+    
+    c.	{{ $error->has('email') ? 'is-invalid' : '' }}
+    
+    d.	{{ $errors->have('email') ? 'is-invalid' : '' }}
+```
+
+    
+62. Pada materi Validasi Form dengan Gaya Bootstrap, kita menggunakan bootstrap versi berapa...
+
+    a.	v4.3.3
+    
+    b.	v3.4.1
+    
+    **c.	v4.3.1**
+    
+    d.	v3.4.3
+    
+63. Pada materi Validasi Form dengan Gaya Bootstrap, kita mengcopy sebuah code dari bootstrap, code tersebut berupa script dari...
+
+    **a.	CSS**
+    
+    b.	JS
+    
+    c.	Bundle
+    
+    d.	Modules
