@@ -762,3 +762,118 @@
     c.	Bundle
     
     d.	Modules
+
+## Mengambil Nilai Request Sebelumnya (Old Request)
+64. pada materi Mengambil Nilai Request Sebelumnya (Old Request), kita dapat menggunakan helper dari laravel untuk mengambil inputan sebelumnya, helper tersebut adalah...
+
+    a.	data_get()
+    
+    b.	abort_if()
+    
+    **c.	old()**
+    
+    d.	str_plural()
+
+    
+65. contoh penulisan helper old() pada tag form adalah...
+
+    a.	class="old('email')"
+    
+    **b.	value"{ old('email') }"**
+    
+    c.	type="old('email')"
+    
+    d.	placeholder="old('email')"
+
+66. pada materi Mengambil Nilai Request Sebelumnya (Old Request), Apa yang terjadi saat kita menginputkan email yang tidak valid, dan kita sudah menggunakan helper old() pada formnya...
+
+    a.	inputan akan hilang
+    
+    b.	inputan akan masuk langsung ke database
+    
+    **c.	inputan akan tetap ada seperti sebelum menekan subcribe**
+    
+    d.	semua salah
+    
+## Validasi dengan Class Form Request
+67. contoh perintah artisan untuk membuat sebuah class form request...
+
+    a.	php artisan request:make SubscriptionFormRequest
+    
+    **b.	php artisan make:request SubscriptionFormRequest**
+    
+    c.	php artisan request SubscriptionFormRequest
+    
+    d.	php make:request artisan SubscriptionFormRequest
+    
+68. File class yang telah dibuat menggunakan perintah artisan untuk membuat class form request terdapat didirectory...
+
+    a.	app/Http/Middleware
+    
+    b.	app/Http/Controllers
+    
+    **c.	app/Http/Requests**
+    
+    d.	app/Http
+
+69. pada materi Validasi dengan Class Form Request, setelah kita melakukan konfigurasi di file class form requestnya apa yang harus kita lakukan...
+
+    **a.	menginject file class form requestnya ke dalam method yang akan kita gunakan**
+    
+    b.	Membiarkannya begitu saja
+    
+    c.	Membuat class baru dengan nama yang sama
+    
+    d.	Semua salah
+
+## Response dengan Redirect
+70. Apa fungsi dari redirect adalah...
+
+    a.	kita akan tetap pada halaman yang sama
+    
+    **b.	mengalihkan kita ke halaman lain**
+    
+    c.	membantu dalam validasi form
+    
+    d.	semua salah
+    
+71. pada laravel ada sebuah method atau helper yang membantu kita melakukan redirect, method tersebut adalah...
+
+    a.	old()
+    
+    **b.	redirect()**
+    
+    c.	route()
+    
+    d.	base_path()
+
+72. pada materi Response dengan Redirect, ada beberapa cara penulisan untuk redirect, dari beberapa penulisan tersebut cara mana yang di sarankan oleh pematerinya...
+
+    a.	return redirect('/lain');
+    
+    b.	return redirect()->to('/lain');
+    
+    **c.	return redirect()->route('other');**
+    
+    d.	semua salah
+
+## Response dengan Redirect
+73. response menggunakan JSON biasanya digunakan untuk...
+
+    **a.	Pembuatan dalam API yang nantinya akan dikonsumsi oleh frontend atau mobile developer**
+    
+    b.	mengalihkan kita ke halaman lain
+    
+    c.	membantu dalam validasi form
+    
+    d.	semua salah
+    
+74. pada laravel ada sebuah method atau helper yang membantu kita melakukan response dengan JSON, method tersebut adalah...
+
+    a.	old()
+    
+    b.	redirect()
+    
+    **c.	response()->json()**
+    
+    d.	base_path()
