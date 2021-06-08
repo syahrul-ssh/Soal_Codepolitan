@@ -154,6 +154,7 @@
     c.	route
     
     d.	public
+    
 16. Alternatif untuk melakukan konfigurasi aplikasi laravel selain di dalam foldernya kita bisa menggunakan... 
 
     a.	.editorconfig
@@ -857,7 +858,7 @@
     
     d.	semua salah
 
-## Response dengan Redirect
+## Response dengan JSON
 73. response menggunakan JSON biasanya digunakan untuk...
 
     **a.	Pembuatan dalam API yang nantinya akan dikonsumsi oleh frontend atau mobile developer**
@@ -877,3 +878,184 @@
     **c.	response()->json()**
     
     d.	base_path()
+
+## Konfigurasi Email
+75. Kita bisa mengkonfigurasi untuk berkirim email di laravel pada file...
+
+    a.	.gitignore
+    
+    **b.	.env**
+    
+    c.	artisan
+    
+    d.	.editorconfig
+    
+76. pada materi Konfigurasi Email, saat pengembangan aplikasi secara local, kita bisa mencoba untuk mengirim email menggunakan...
+
+    a.	MailSpring
+    
+    b.	Apple Mail
+    
+    c.	Windows Mail
+    
+    **d.	Mailtrap**
+
+77. Apa fungsi dari mailtrap...
+
+    **a.	testing dalam berkirim email saat mengembangkan sebuah aplikasi, email tersebut akan ditampung di mailtrap, agar email tersebut tidak terkirim ke email sungguhan**
+    
+    b.	testing dalam berkirim email saat mengembangkan sebuah aplikasi, email tersebut tidak akan ditampung di mailtrap, dan email tersebut akan terkirim ke email sungguhan
+    
+    c.	testing dalam berkirim email saat mengembangkan sebuah aplikasi, email tersebut akan ditampung di mailtrap, dan email tersebut juga akan terkirim ke email sungguhan
+    
+    d.	semua salah
+    
+78. Driver Mail yang di support oleh laravel adalah...
+
+    a.	smtp
+    
+    b.	mailgun
+    
+    c.	maildrill
+    
+    d.	semua benar
+
+## Dasar-dasar dalam Mengirim Email
+75. Perintah artisan untuk membuat class mailable pada laravel adalah...
+
+    a.	php artisan mail:make UserVerificationMail
+    
+    b.	php artisan mail UserVerificationMail
+    
+    **c.	php artisan make:mail UserVerificationMail**
+    
+    d.	php make:mail artisan UserVerificationMail
+    
+76. pada saat kita sudah melakukan perintah artisan untuk membuat class mailable, file tersebut akan tersimpan di...
+
+    a.	app/Http
+    
+    **b.	app/Mail**
+    
+    c.	app/Exceptions
+    
+    d.	app/Console
+
+77. Contoh code yang terdapat di Controller untuk berkirim email adalah...
+
+    a.	Mails::to('ihsan@belajarlaravel.test')->send(new UserVerificationMail());
+    
+    b.	Mail::to(ihsan@belajarlaravel.test)->send(new UserVerificationMail());
+    
+    **c.	Mail::to('ihsan@belajarlaravel.test')->send(new UserVerificationMail());**
+    
+    d.	semua salah
+    
+## Email dengan Format Markdown
+78. Perintah artisan untuk membuat class mailable beserta dengan markdownnya pada laravel adalah...
+
+    a.	php artisan mail:make UserVerificationMail --markdown='emails.activation'
+    
+    b.	php artisan mail UserVerificationMail --markdown='emails.activation'
+    
+    **c.	php artisan make:mail UserVerificationMail --markdown='emails.activation'**
+    
+    d.	php make:mail artisan UserVerificationMail --markdown='emails.activation'
+    
+79. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, apa isi dari method build yang terdapat di class mailable dengan markdown yang telah dibuat kita buat...
+
+    a.	return markdown('emails.activation');
+    
+    **b.	return $this->markdown('emails.activation');**
+    
+    c.	return $this->markdown(emails.activation);
+    
+    d.	return $this->('emails.activation');
+
+80. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, pada viewnya kita diberikan default code seperti apa...
+```
+
+    a.	@component('message')
+    
+         # Introduction
+         
+         
+         The body of your message.
+         
+         
+         @component('button', ['url' => ''])
+         
+         Button Text
+         
+         @endcomponent
+         
+
+         Thanks,<br>
+         
+         {{ config('app.name') }}
+         
+         @endcomponent
+    
+    b.	@component('mail::message')
+         
+         The body of your message.
+         
+         
+         @component('mail::button')
+         
+         Button Text
+         
+         @endcomponent
+         
+
+         Thanks,<br>
+         
+         {{ config('app.name') }}
+         
+         @endcomponent
+    
+    **c.	@component('mail::message')
+    
+         # Introduction
+         
+         
+         The body of your message.
+         
+         
+         @component('mail::button', ['url' => ''])
+         
+         Button Text
+         
+         @endcomponent
+         
+
+         Thanks,<br>
+         
+         {{ config('app.name') }}
+         
+         @endcomponent**
+    
+    d.	Semua salah
+    
+```
+
+## Render Email di View
+81. Kita bisa melakukan pengecekan email yang dikirim oleh kita dengan merendernya didalam view dengan menambahkan code di controller sebagai berikut...
+
+    a.	return UserActivationMail();
+    
+    **b.	return new UserActivationMail();**
+    
+    c.	return new UserActivationMail;
+    
+    d.	semua salah
+    
+82. apa keunggulan kita langsung merender tampilan email didalam view...
+
+    a.	menghamburkan waktu pembuatan tampilan untuk email
+    
+    **b.	mengefisiensikan waktu dalam pembuatan tampilan untuk email, agar kita tidak selalu melihatnya di mailtrap**
+    
+    c.	mengefisiensikan waktu dalam pembuatan tampilan website
+    
+    d.	semua salah
