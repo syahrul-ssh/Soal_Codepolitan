@@ -1059,3 +1059,310 @@
     c.	mengefisiensikan waktu dalam pembuatan tampilan website
     
     d.	semua salah
+
+# Menggunakan Migration
+## Konsep Migration
+83. Apa fungsi dari migration pada laravel...
+
+    a.	untuk menggantikan fungsi dari database
+    
+    b.	untuk mempersulit dalam kolaborasi pembuatan tabel pada database
+    
+    **c.	untuk memudahkan dalam kolaborasi pembuatan tabel pada database**
+    
+    d.	semua salah
+    
+84. Berada di directory mana migration ini berada...
+
+    a.	app/Http/Controllers
+    
+    **b.	database/migrations**
+    
+    c.	database/factories
+    
+    d.	database/seeds
+    
+85. perintah artisan untuk membuat sebuah file migration pada laravel adalah...
+
+    a.	php make:migration create_users_table
+    
+    b.	php artisan migration:make create_users_table
+    
+    c.	php artisan migration create_users_table
+    
+    **d.	php artisan make:migration create_users_table**
+    
+86. perintah artisan untuk menjalankan file migration yang telah kita buat adalah...
+
+    a.	php artisan optimize
+    
+    **b.	php artisan migrate**
+    
+    c.	php artisan serve
+    
+    d.	php artisan up
+
+## Memodifikasi Kolom
+87. pada materi Memodifikasi Kolom, pemateri menyampaikan bahwa cara terbaik dalam memodifikasi tabel dalam database menggunakan migration yaitu dengan...
+
+    a.	mengedit file migration yang sudah ada
+    
+    **b.	membuat file migration baru**
+    
+    c.	menghapus file migration yang lama, lalu membuat lagi yang baru
+    
+    d.	semua salah
+    
+88. pada materi Memodifikasi Kolom, saat kita ingin merubah suatu kolom pada file migration, kita harus menambahkan method...
+
+    a.	edit();
+    
+    **b.	change();**
+    
+    c.	store();
+    
+    d.	update();
+    
+89. pada materi Memodifikasi Kolom, saat kita melakukan php artisan migrate itu terjadi sebuah error, error tersebut mengharuskan kita untuk menginstall dependency sebagai berikut...
+
+    a.	spatie/laravel-menu
+    
+    b.	lubusin/laravel-decomposer
+    
+    **c.	doctrine/dbal**
+    
+    d.	semua salah
+
+# Managemen Database dengan Eloquent
+## Membuat Model dan Data
+90. pada migration tabel posts kita bisa lihat ada kolom yang bernama created_at dan updated_at, kedua kolom tersebut terbuat dari method...
+
+    a.	string();
+    
+    **b.	timestamps();**
+    
+    c.	date();
+    
+    d.	time();
+    
+91. perintah artisan untuk membuat sebuah model pada laravel yaitu...
+
+    a.	php artisan model Post
+    
+    b.	php make:model Post
+    
+    **c.	php artisan make:model Post**
+    
+    d.	php artisan make Post
+    
+92. apa fungsi dari eloquent pada laravel...
+
+    **a.	berfungsi untuk berinteraksi dengan database**
+    
+    b.	berfungsi untuk berinteraksi dengan controller
+    
+    c.	berfungsi untuk berinteraksi dengan route
+    
+    d.	semua salah
+
+93. pada model kita harus mendefinisikan kolom yang kita buat agar dapat diisi dengan data, didalam sebuah property...
+
+    a.	$table
+    
+    **b.	$fillable**
+    
+    c.	$primary_key
+    
+    d.	semua salah
+    
+## Mengambil Data dari Database
+94. dalam mengambil data dari database menggunakan eloquent, kita bisa menggunakan method...
+
+    a.	update()
+    
+    b.	post()
+    
+    **c.	get()**
+    
+    d.	take()
+    
+95. kita bisa membatasi data yang akan kita tampilkan dengan menggunakan method...
+
+    a.	update()
+    
+    b.	post()
+    
+    c.	get()
+    
+    **d.	take()**
+
+## Membuat, Mengubah dan Menghapus Data di Database
+96. contoh code dalam mengimplementasikan membuat sebuah data pada eloquent laravel...
+```
+
+    a.	create([
+            'title' => 'Judul 1',
+            'content' => 'Konten 1'
+         ]);
+    
+    b.	Post([
+            'title' => 'Judul 1',
+            'content' => 'Konten 1'
+         ]);
+    
+    **c.	Post::create([
+            'title' => 'Judul 1',
+            'content' => 'Konten 1'
+         ]);**
+    
+    d.	Postcreate([
+            'title' => 'Judul 1',
+            'content' => 'Konten 1'
+         ]);
+```
+    
+97. setelah kita menemukan id dari data yang ingin kita rubah, kita dapat memasukan sebuah code ... untuk mengubah data dari id tersebut
+```
+
+    **a.	Post->update([
+            'title' => 'Judul Satu',
+            'content' => 'Konten Satu'
+         ]);**
+    
+    b.	Post([
+            'title' => 'Judul Satu',
+            'content' => 'Konten Satu'
+         ]);
+    
+    c.	update([
+            'title' => 'Judul Satu',
+            'content' => 'Konten Satu'
+         ]);
+    
+    d.	Postupdate([
+            'title' => 'Judul Satu',
+            'content' => 'Konten Satu'
+         ]);
+```
+   
+98. setelah kita menemukan id dari data yang ingin kita hapus, kita dapat memasukan sebuah code ... untuk menghapus data dari id tersebut
+```
+
+    **a.	Post->delete();**
+    
+    b.	Post();
+    
+    c.	delete();
+    
+    d.	Postdelete();
+```
+
+## Mencari Mengurutkan dan Mengambil Sebagian Data
+99. pada materi Mencari Mengurutkan dan Mengambil Sebagian Data, kita bisa mengambil data dengan kondisi tertentu secara spesifik menggunakan...
+
+    a.	Post::get('is_published', true)->get();
+    
+    b.	Post::update('is_published', true)->get();
+    
+    c.	Post::delete('is_published', true)->get();
+    
+    **d.	Post::where('is_published', true)->get();**
+    
+100. kita bisa mengurutkan data secara ascending dengan menggunakan code...
+
+    a.	Post::orderBy('id', 'desc')->get();
+    
+    **b.	Post::orderBy('id', 'asc')->get();**
+    
+    c.	Post::order('id', 'asc')->get();
+    
+    d.	PostorderBy('id', 'asc')->get();
+    
+101. kita bisa mengurutkan data secara descending dengan menggunakan code...
+
+    **a.	Post::orderBy('id', 'desc')->get();**
+    
+    b.	Post::orderBy('id', 'asc')->get();
+    
+    c.	Post::order('id', 'asc')->get();
+    
+    d.	PostorderBy('id', 'asc')->get();
+    
+## Bekerja dengan Data Tanggal dan Waktu
+102. dalam memanipulasi dateTime, laravel memakai sebuah API yang dapat melakukannya yaitu...
+
+    a.	wood
+    
+    **b.	carbon**
+    
+    c.	steel
+    
+    d.	zinc
+    
+103. pada carbon terdapat sebuah method yang dapat mempermudah manusia dalam melihat dateTime yang sudah berapa lama sebuah data dibuat atau di rubah, yaitu method...
+
+    a.	diffAsCarbonInterval()
+    
+    b.	diff()
+    
+    c.	diffInMonths()
+    
+    **d.	diffForHumans()**
+    
+104. kita bisa merubah sebuah data agar dapat kita manipulasi menggunakan carbon dengan menggunakan property...
+
+    a.	$table
+    
+    **b.	$dates**
+    
+    c.	$fillable
+    
+    d.	semua salah
+
+## Mengakses Properti pada Eloquent Model
+105. pada model default yang ada di laravel yaitu model User.php, terdapat sebuah property $hidden yang berfungsi...
+
+    a.	untuk menampilkan data yang di inginkan pada response
+    
+    **b.	untuk tidak menampilkan data yang di inginkan pada response**
+    
+    c.	untuk menghapus data yang di inginkan pada response
+    
+    d.	semua salah
+    
+106. contoh code pada model untuk mengakses sebuah data pada database...
+
+    **a.	public function getUserName(){
+            return $this->username;
+         }**
+    
+    b.	public getUserName(){
+            return $this->username;
+         }
+    
+    c.	function getUserName(){
+            return $this->username;
+         }
+    
+    d.	public function getUserName(){
+            return username;
+         }
+    
+107. contoh code pada model untuk mengakses beberapa data pada database...
+
+    **a.	public function getFullName(){
+            return $this->fisrt_name . ' ' . $this->last_name;
+         }**
+    
+    b.	public getFullName(){
+            return $this->fisrt_name . ' ' . $this->last_name;
+         }
+    
+    c.	function getFullName(){
+            return $this->fisrt_name . ' ' . $this->last_name;
+         }
+    
+    d.	public function getFullName(){
+            return fisrt_name . ' ' . last_name;
+         }
+    
