@@ -916,12 +916,12 @@
     
     b.	mailgun
     
-    c.	maildrill
+    c.	mandrill
     
-    d.	semua benar
+    **d.	semua benar**
 
 ## Dasar-dasar dalam Mengirim Email
-75. Perintah artisan untuk membuat class mailable pada laravel adalah...
+79. Perintah artisan untuk membuat class mailable pada laravel adalah...
 
     a.	php artisan mail:make UserVerificationMail
     
@@ -931,7 +931,7 @@
     
     d.	php make:mail artisan UserVerificationMail
     
-76. pada saat kita sudah melakukan perintah artisan untuk membuat class mailable, file tersebut akan tersimpan di...
+80. pada saat kita sudah melakukan perintah artisan untuk membuat class mailable, file tersebut akan tersimpan di...
 
     a.	app/Http
     
@@ -941,7 +941,7 @@
     
     d.	app/Console
 
-77. Contoh code yang terdapat di Controller untuk berkirim email adalah...
+81. Contoh code yang terdapat di Controller untuk berkirim email adalah...
 
     a.	Mails::to('ihsan@belajarlaravel.test')->send(new UserVerificationMail());
     
@@ -952,7 +952,7 @@
     d.	semua salah
     
 ## Email dengan Format Markdown
-78. Perintah artisan untuk membuat class mailable beserta dengan markdownnya pada laravel adalah...
+82. Perintah artisan untuk membuat class mailable beserta dengan markdownnya pada laravel adalah...
 
     a.	php artisan mail:make UserVerificationMail --markdown='emails.activation'
     
@@ -962,7 +962,7 @@
     
     d.	php make:mail artisan UserVerificationMail --markdown='emails.activation'
     
-79. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, apa isi dari method build yang terdapat di class mailable dengan markdown yang telah dibuat kita buat...
+83. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, apa isi dari method build yang terdapat di class mailable dengan markdown yang telah dibuat kita buat...
 
     a.	return markdown('emails.activation');
     
@@ -972,7 +972,7 @@
     
     d.	return $this->('emails.activation');
 
-80. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, pada viewnya kita diberikan default code seperti apa...
+84. Setelah kita membuat class mailable dengan markdown menggunakan perintah artisan, pada viewnya kita diberikan default code seperti apa...
 ```
 
     a.	@component('message')
@@ -1040,7 +1040,7 @@
 ```
 
 ## Render Email di View
-81. Kita bisa melakukan pengecekan email yang dikirim oleh kita dengan merendernya didalam view dengan menambahkan code di controller sebagai berikut...
+85. Kita bisa melakukan pengecekan email yang dikirim oleh kita dengan merendernya didalam view dengan menambahkan code di controller sebagai berikut...
 
     a.	return UserActivationMail();
     
@@ -1050,7 +1050,7 @@
     
     d.	semua salah
     
-82. apa keunggulan kita langsung merender tampilan email didalam view...
+86. apa keunggulan kita langsung merender tampilan email didalam view...
 
     a.	menghamburkan waktu pembuatan tampilan untuk email
     
@@ -1062,7 +1062,7 @@
 
 # Menggunakan Migration
 ## Konsep Migration
-83. Apa fungsi dari migration pada laravel...
+87. Apa fungsi dari migration pada laravel...
 
     a.	untuk menggantikan fungsi dari database
     
@@ -1072,7 +1072,7 @@
     
     d.	semua salah
     
-84. Berada di directory mana migration ini berada...
+88. Berada di directory mana migration ini berada...
 
     a.	app/Http/Controllers
     
@@ -1082,7 +1082,7 @@
     
     d.	database/seeds
     
-85. perintah artisan untuk membuat sebuah file migration pada laravel adalah...
+89. perintah artisan untuk membuat sebuah file migration pada laravel adalah...
 
     a.	php make:migration create_users_table
     
@@ -1092,7 +1092,7 @@
     
     **d.	php artisan make:migration create_users_table**
     
-86. perintah artisan untuk menjalankan file migration yang telah kita buat adalah...
+90. perintah artisan untuk menjalankan file migration yang telah kita buat adalah...
 
     a.	php artisan optimize
     
@@ -1103,7 +1103,7 @@
     d.	php artisan up
 
 ## Memodifikasi Kolom
-87. pada materi Memodifikasi Kolom, pemateri menyampaikan bahwa cara terbaik dalam memodifikasi tabel dalam database menggunakan migration yaitu dengan...
+91. pada materi Memodifikasi Kolom, pemateri menyampaikan bahwa cara terbaik dalam memodifikasi tabel dalam database menggunakan migration yaitu dengan...
 
     a.	mengedit file migration yang sudah ada
     
@@ -1113,7 +1113,7 @@
     
     d.	semua salah
     
-88. pada materi Memodifikasi Kolom, saat kita ingin merubah suatu kolom pada file migration, kita harus menambahkan method...
+92. pada materi Memodifikasi Kolom, saat kita ingin merubah suatu kolom pada file migration, kita harus menambahkan method...
 
     a.	edit();
     
@@ -1123,7 +1123,7 @@
     
     d.	update();
     
-89. pada materi Memodifikasi Kolom, saat kita melakukan php artisan migrate itu terjadi sebuah error, error tersebut mengharuskan kita untuk menginstall dependency sebagai berikut...
+93. pada materi Memodifikasi Kolom, saat kita melakukan php artisan migrate itu terjadi sebuah error, error tersebut mengharuskan kita untuk menginstall dependency sebagai berikut...
 
     a.	spatie/laravel-menu
     
@@ -1135,7 +1135,7 @@
 
 # Managemen Database dengan Eloquent
 ## Membuat Model dan Data
-90. pada migration tabel posts kita bisa lihat ada kolom yang bernama created_at dan updated_at, kedua kolom tersebut terbuat dari method...
+94. pada migration tabel posts kita bisa lihat ada kolom yang bernama created_at dan updated_at, kedua kolom tersebut terbuat dari method...
 
     a.	string();
     
@@ -1145,7 +1145,7 @@
     
     d.	time();
     
-91. perintah artisan untuk membuat sebuah model pada laravel yaitu...
+95. perintah artisan untuk membuat sebuah model pada laravel yaitu...
 
     a.	php artisan model Post
     
@@ -1155,7 +1155,7 @@
     
     d.	php artisan make Post
     
-92. apa fungsi dari eloquent pada laravel...
+96. apa fungsi dari eloquent pada laravel...
 
     **a.	berfungsi untuk berinteraksi dengan database**
     
@@ -1165,7 +1165,7 @@
     
     d.	semua salah
 
-93. pada model kita harus mendefinisikan kolom yang kita buat agar dapat diisi dengan data, didalam sebuah property...
+97. pada model kita harus mendefinisikan kolom yang kita buat agar dapat diisi dengan data, didalam sebuah property...
 
     a.	$table
     
@@ -1176,7 +1176,7 @@
     d.	semua salah
     
 ## Mengambil Data dari Database
-94. dalam mengambil data dari database menggunakan eloquent, kita bisa menggunakan method...
+98. dalam mengambil data dari database menggunakan eloquent, kita bisa menggunakan method...
 
     a.	update()
     
@@ -1186,7 +1186,7 @@
     
     d.	take()
     
-95. kita bisa membatasi data yang akan kita tampilkan dengan menggunakan method...
+99. kita bisa membatasi data yang akan kita tampilkan dengan menggunakan method...
 
     a.	update()
     
@@ -1197,7 +1197,7 @@
     **d.	take()**
 
 ## Membuat, Mengubah dan Menghapus Data di Database
-96. contoh code dalam mengimplementasikan membuat sebuah data pada eloquent laravel...
+100. contoh code dalam mengimplementasikan membuat sebuah data pada eloquent laravel...
 ```
 
     a.	create([
@@ -1221,7 +1221,7 @@
          ]);
 ```
     
-97. setelah kita menemukan id dari data yang ingin kita rubah, kita dapat memasukan sebuah code ... untuk mengubah data dari id tersebut
+101. setelah kita menemukan id dari data yang ingin kita rubah, kita dapat memasukan sebuah code ... untuk mengubah data dari id tersebut
 ```
 
     **a.	Post->update([
@@ -1245,7 +1245,7 @@
          ]);
 ```
    
-98. setelah kita menemukan id dari data yang ingin kita hapus, kita dapat memasukan sebuah code ... untuk menghapus data dari id tersebut
+102. setelah kita menemukan id dari data yang ingin kita hapus, kita dapat memasukan sebuah code ... untuk menghapus data dari id tersebut
 ```
 
     **a.	Post->delete();**
@@ -1258,7 +1258,7 @@
 ```
 
 ## Mencari Mengurutkan dan Mengambil Sebagian Data
-99. pada materi Mencari Mengurutkan dan Mengambil Sebagian Data, kita bisa mengambil data dengan kondisi tertentu secara spesifik menggunakan...
+103. pada materi Mencari Mengurutkan dan Mengambil Sebagian Data, kita bisa mengambil data dengan kondisi tertentu secara spesifik menggunakan...
 
     a.	Post::get('is_published', true)->get();
     
@@ -1268,7 +1268,7 @@
     
     **d.	Post::where('is_published', true)->get();**
     
-100. kita bisa mengurutkan data secara ascending dengan menggunakan code...
+104. kita bisa mengurutkan data secara ascending dengan menggunakan code...
 
     a.	Post::orderBy('id', 'desc')->get();
     
@@ -1278,7 +1278,7 @@
     
     d.	PostorderBy('id', 'asc')->get();
     
-101. kita bisa mengurutkan data secara descending dengan menggunakan code...
+105. kita bisa mengurutkan data secara descending dengan menggunakan code...
 
     **a.	Post::orderBy('id', 'desc')->get();**
     
@@ -1289,7 +1289,7 @@
     d.	PostorderBy('id', 'asc')->get();
     
 ## Bekerja dengan Data Tanggal dan Waktu
-102. dalam memanipulasi dateTime, laravel memakai sebuah API yang dapat melakukannya yaitu...
+106. dalam memanipulasi dateTime, laravel memakai sebuah API yang dapat melakukannya yaitu...
 
     a.	wood
     
@@ -1299,7 +1299,7 @@
     
     d.	zinc
     
-103. pada carbon terdapat sebuah method yang dapat mempermudah manusia dalam melihat dateTime yang sudah berapa lama sebuah data dibuat atau di rubah, yaitu method...
+107. pada carbon terdapat sebuah method yang dapat mempermudah manusia dalam melihat dateTime yang sudah berapa lama sebuah data dibuat atau di rubah, yaitu method...
 
     a.	diffAsCarbonInterval()
     
@@ -1309,7 +1309,7 @@
     
     **d.	diffForHumans()**
     
-104. kita bisa merubah sebuah data agar dapat kita manipulasi menggunakan carbon dengan menggunakan property...
+108. kita bisa merubah sebuah data agar dapat kita manipulasi menggunakan carbon dengan menggunakan property...
 
     a.	$table
     
@@ -1320,7 +1320,7 @@
     d.	semua salah
 
 ## Mengakses Properti pada Eloquent Model
-105. pada model default yang ada di laravel yaitu model User.php, terdapat sebuah property $hidden yang berfungsi...
+109. pada model default yang ada di laravel yaitu model User.php, terdapat sebuah property $hidden yang berfungsi...
 
     a.	untuk menampilkan data yang di inginkan pada response
     
@@ -1330,7 +1330,7 @@
     
     d.	semua salah
     
-106. contoh code pada model untuk mengakses sebuah data pada database...
+110. contoh code pada model untuk mengakses sebuah data pada database...
 
     **a.	public function getUserName(){
             return $this->username;
@@ -1348,7 +1348,7 @@
             return username;
          }
     
-107. contoh code pada model untuk mengakses beberapa data pada database...
+111. contoh code pada model untuk mengakses beberapa data pada database...
 
     **a.	public function getFullName(){
             return $this->fisrt_name . ' ' . $this->last_name;
@@ -1367,7 +1367,7 @@
          }
     
 ## Menggunakan Fitur Scope
-108. pada materi Menggunakan Fitur Scope, penulisan function scope pada model di laravel...
+112. pada materi Menggunakan Fitur Scope, penulisan function scope pada model di laravel...
 
     a.	public scopeActive($query){
             return $query->where('active', true);
@@ -1385,7 +1385,7 @@
             return $query->where('active', true);
          }
     
-109. saat kita mengubah nama dari sebuah kolom di tabel database, jika kita menggunakan fitur scope maka kita hanya perlu mengubah nama dari kolom tersebut di...
+113. saat kita mengubah nama dari sebuah kolom di tabel database, jika kita menggunakan fitur scope maka kita hanya perlu mengubah nama dari kolom tersebut di...
 
     a.	controller
     
@@ -1395,7 +1395,7 @@
     
     d.	route
     
-110. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan scope pada controller di laravel...
+114. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan scope pada controller di laravel...
 
     **a.	$user = User::active()->get();**
     
@@ -1405,7 +1405,7 @@
     
     d.	$user = user::active()->get();
     
-111. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan 2 method scope pada controller di laravel...
+115. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan 2 method scope pada controller di laravel...
 
     **a.	$user = User::active()->ageGreaterThan(20)->get();**
     
@@ -1416,7 +1416,7 @@
     d.	$user = user::active()->ageGreaterThan(20)->get();
     
 ## Route Model Binding
-112. apa yang dimaksud dengan route model binding pada laravel...
+116. apa yang dimaksud dengan route model binding pada laravel...
 
     a.	sebuah fitur yang dapat membinding controller ke sebuah model
     
@@ -1426,7 +1426,7 @@
     
     d.	semua salah
     
-113. pada materi Route Model Binding, penulisan function route binding pada controller di laravel...
+117. pada materi Route Model Binding, penulisan function route binding pada controller di laravel...
 
     a.	public show(User $user){
             dd($user);
@@ -1444,7 +1444,7 @@
             dd($user);
          }
     
-114. pada materi Route Model Binding, penulisan function route binding pada model agar kita dapat mengambil parameter berdasarkan username di laravel...
+118. pada materi Route Model Binding, penulisan function route binding pada model agar kita dapat mengambil parameter berdasarkan username di laravel...
 
     a.	public getRouteKeyName(){
             return 'username';
@@ -1462,7 +1462,7 @@
             return 'username';
          }
     
-115.  pada materi Route Model Binding, kita bisa menampilkan data yang sudah di activated saja dengan menambahkan sebuah kondisi di sebuah file...
+119.  pada materi Route Model Binding, kita bisa menampilkan data yang sudah di activated saja dengan menambahkan sebuah kondisi di sebuah file...
 
     a.	AppServiceProvider.php
     
@@ -1471,9 +1471,10 @@
     c.	EventServiceProvider.php
     
     **d.	RouteServiceProvider.php**
-    
+
+# Membuat Pagination
 ## Dasar-dasar Pagination
-116. method yang digunakan untuk menggunakan fitur pagination pada laravel adalah...
+120. method yang digunakan untuk menggunakan fitur pagination pada laravel adalah...
 
     a.	take();
     
@@ -1483,7 +1484,7 @@
     
     d.	get();
     
-117. pada materi Dasar-dasar Pagination, contoh code dalam menampilkan link halaman pagination pada view...
+121. pada materi Dasar-dasar Pagination, contoh code dalam menampilkan link halaman pagination pada view...
 
     a.	{{ $users->paginate() }}
     
@@ -1493,7 +1494,7 @@
     
     **d.	{{ $users->render() }}**
     
-118. pada materi Dasar-dasar Pagination, contoh code agar kita bisa melihat data yang ditampilkan secara dinamis sesuai keinginan adalah...
+122. pada materi Dasar-dasar Pagination, contoh code agar kita bisa melihat data yang ditampilkan secara dinamis sesuai keinginan adalah...
 
     a.	$users = User::paginate($request->get('per-page', 10));
     
@@ -1503,7 +1504,7 @@
     
     d.	$users = User::latest()->paginate(get('per-page', 10));
     
-119.  pada materi Dasar-dasar Pagination, contoh penulisan per-page yang benar pada address bar di browser...
+123.  pada materi Dasar-dasar Pagination, contoh penulisan per-page yang benar pada address bar di browser...
 
     **a.	belajarlaravel.test/?per-page=25**
     
@@ -1514,7 +1515,7 @@
     d.	semua salah
     
 ## Mempertahankan Query String pada Pagination
-120. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page pada view...
+124. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page pada view...
 
     a.	{{ $users->appends(['per-page' => Request::get('per-page')])->paginate() }}
     
@@ -1524,7 +1525,7 @@
     
     **d.	{{ $users->appends(['per-page' => Request::get('per-page')])->render() }}**
     
-121. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mengurutkan data yang telah kita pagination...
+125. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mengurutkan data yang telah kita pagination...
 
     a.	$users = User::paginate($request->get('per-page', 10));
     
@@ -1534,7 +1535,7 @@
     
     d.	$users = User::orderBy('name', $request->get('order', 'asc'))->paginate(get('per-page', 10));
     
-122. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page dan order menggunakan method only pada view...
+126. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page dan order menggunakan method only pada view...
 
     a.	{{ $users->appends(only('per-page', order))->render() }}
     
@@ -1544,4 +1545,99 @@
     
     d.	{{ $users->request()->only('per-page', order)->render() }}
 
+# Memanfaatkan Seeder
+## Dasar-dasar Seeder
+127. apa yang dimaksud dengan seeder pada laravel...
+
+    a.	sebuah class yang dapat membuat sebuah tabel baru di database 
+    
+    **b.	sebuah class yang dapat membuat data pada sebuah tabel database**
+    
+    c.	sebuah class yang membantu dalam pembuatan sebuah model
+    
+    d.	semua salah
+    
+128. perintah artisan untuk membuat class seeder adalah...
+
+    a.	php make:seeder PostTableSeeder
+    
+    b.	php artisan seeder PostTableSeeder
+    
+    c.	php artisan make seeder PostTableSeeder
+    
+    **d.	php artisan make:seeder PostTableSeeder**
+    
+129. perintah artisan untuk menjalankan class seeder adalah...
+
+    a.	php artisan db seed
+    
+    b.	php artisan seed
+    
+    **c.	php artisan db:seed**
+    
+    d.	php db:seed
+    
+## Seeder Factory
+130. perintah artisan untuk membuat class factory adalah...
+
+    a.	php make:factory PostFactory
+    
+    b.	php artisan factory PostFactory
+    
+    c.	php artisan make factory PostFactory
+    
+    **d.	php artisan make:factory PostFactory**
+    
+131. pada materi Seeder Factory, contoh code pada class seeder untuk menjalankan class factory...
+
+    a.	factory(App\Post::class, 150);
+    
+    b.	factory(App\Post, 150)->create();
+    
+    **c.	factory(App\Post::class, 150)->create();**
+    
+    d.	factory(App\Postclass, 150)->create();
+
+# Mengunakan Fitur Auth Laravel
+## Mengaktifkan Fitur Auth
+132. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
+    
+133. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
+    
+## Memverifikasi Email Setelah Registrasi
+134. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
+    
+135. 
+
+    a.	
+    
+    b.	
+    
+    c.	
+    
+    d.	
 
