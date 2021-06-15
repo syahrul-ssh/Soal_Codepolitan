@@ -1366,3 +1366,109 @@
             return fisrt_name . ' ' . last_name;
          }
     
+## Menggunakan Fitur Scope
+108. pada materi Menggunakan Fitur Scope, penulisan function scope pada model di laravel...
+
+    a.	public scopeActive($query){
+            return $query->where('active', true);
+         }
+    
+    b.	public function scopeActive(){
+            return $query->where('active', true);
+         }
+    
+    **c.	public function scopeActive($query){
+            return $query->where('active', true);
+         }**
+    
+    d.	public function scope Active($query){
+            return $query->where('active', true);
+         }
+    
+109. saat kita mengubah nama dari sebuah kolom di tabel database, jika kita menggunakan fitur scope maka kita hanya perlu mengubah nama dari kolom tersebut di...
+
+    a.	controller
+    
+    **b.	model**
+    
+    c.	middleware
+    
+    d.	route
+    
+110. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan scope pada controller di laravel...
+
+    **a.	$user = User::active()->get();**
+    
+    b.	$user = active()->get();
+    
+    c.	$user = Useractive()->get();
+    
+    d.	$user = user::active()->get();
+    
+111. pada materi Menggunakan Fitur Scope, contoh penulisan code pemanggilan 2 method scope pada controller di laravel...
+
+    **a.	$user = User::active()->ageGreaterThan(20)->get();**
+    
+    b.	$user = active()->ageGreaterThan(20)->get();
+    
+    c.	$user = Useractive()->ageGreaterThan(20)->get();
+    
+    d.	$user = user::active()->ageGreaterThan(20)->get();
+    
+## Route Model Binding
+112. apa yang dimaksud dengan route model binding pada laravel...
+
+    a.	sebuah fitur yang dapat membinding controller ke sebuah model
+    
+    **b.	sebuah fitur yang dapat membinding route ke sebuah model**
+    
+    c.	sebuah fitur yang dapat membinding route ke sebuah controller
+    
+    d.	semua salah
+    
+113. pada materi Route Model Binding, penulisan function route binding pada controller di laravel...
+
+    a.	public show(User $user){
+            dd($user);
+         }
+    
+    b.	public function show(){
+            dd($user);
+         }
+    
+    **c.	public function show(User $user){
+            dd($user);
+         }**
+    
+    d.	public function show(User){
+            dd($user);
+         }
+    
+114. pada materi Route Model Binding, penulisan function route binding pada model agar kita dapat mengambil parameter berdasarkan username di laravel...
+
+    a.	public getRouteKeyName(){
+            return 'username';
+         }
+    
+    **b.	public function getRouteKeyName(){
+            return 'username';
+         }**
+    
+    c.	public function get RouteKeyName(){
+            return 'username';
+         }
+    
+    d.	public function get(){
+            return 'username';
+         }
+    
+115.  pada materi Route Model Binding, kita bisa menampilkan data yang sudah di activated saja dengan menambahkan sebuah kondisi di sebuah file...
+
+    a.	AppServiceProvider.php
+    
+    b.	AuthServiceProvider.php
+    
+    c.	EventServiceProvider.php
+    
+    **d.	RouteServiceProvider.php**
+    
