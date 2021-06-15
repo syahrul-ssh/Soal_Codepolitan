@@ -1472,3 +1472,76 @@
     
     **d.	RouteServiceProvider.php**
     
+## Dasar-dasar Pagination
+116. method yang digunakan untuk menggunakan fitur pagination pada laravel adalah...
+
+    a.	take();
+    
+    b.	latest();
+    
+    **c.	paginate();**
+    
+    d.	get();
+    
+117. pada materi Dasar-dasar Pagination, contoh code dalam menampilkan link halaman pagination pada view...
+
+    a.	{{ $users->paginate() }}
+    
+    b.	{{ $users->get() }}
+    
+    c.	{{ $users->post() }}
+    
+    **d.	{{ $users->render() }}**
+    
+118. pada materi Dasar-dasar Pagination, contoh code agar kita bisa melihat data yang ditampilkan secara dinamis sesuai keinginan adalah...
+
+    a.	$users = User::paginate($request->get('per-page', 10));
+    
+    **b.	$users = User::latest()->paginate($request->get('per-page', 10));**
+    
+    c.	$users = latest()->paginate($request->get('per-page', 10));
+    
+    d.	$users = User::latest()->paginate(get('per-page', 10));
+    
+119.  pada materi Dasar-dasar Pagination, contoh penulisan per-page yang benar pada address bar di browser...
+
+    **a.	belajarlaravel.test/?per-page=25**
+    
+    b.	belajarlaravel.test/?page=25
+    
+    c.	belajarlaravel.test/?page=1&per-page-25
+    
+    d.	semua salah
+    
+## Mempertahankan Query String pada Pagination
+120. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page pada view...
+
+    a.	{{ $users->appends(['per-page' => Request::get('per-page')])->paginate() }}
+    
+    b.	{{ $users->appends(['per-page' => Request::get('per-page')])->get() }}
+    
+    c.	{{ $users->appends(['per-page' => Request::get('per-page')])->post() }}
+    
+    **d.	{{ $users->appends(['per-page' => Request::get('per-page')])->render() }}**
+    
+121. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mengurutkan data yang telah kita pagination...
+
+    a.	$users = User::paginate($request->get('per-page', 10));
+    
+    **b.	$users = User::orderBy('name', $request->get('order', 'asc'))->paginate($request->get('per-page', 10));**
+    
+    c.	$users = orderBy('name', $request->get('order', 'asc'))->paginate($request->get('per-page', 10));
+    
+    d.	$users = User::orderBy('name', $request->get('order', 'asc'))->paginate(get('per-page', 10));
+    
+122. pada materi Mempertahankan Query String pada Pagination, contoh code dalam mempertahankan halaman per-page dan order menggunakan method only pada view...
+
+    a.	{{ $users->appends(only('per-page', order))->render() }}
+    
+    b.	{{ appends(request()->only('per-page', order))->render() }}
+    
+    **c.	{{ $users->appends(request()->only('per-page', order))->render() }}**
+    
+    d.	{{ $users->request()->only('per-page', order)->render() }}
+
+
