@@ -1600,44 +1600,44 @@
 
 # Mengunakan Fitur Auth Laravel
 ## Mengaktifkan Fitur Auth
-132. 
+132. pada laravel 6 kita dapat membuat fitur auth dengan cara menginstall dependency yang bernama...
 
-    a.	
+    a.	doctrine/dbal
     
-    b.	
+    **b.	laravel/ui**
     
-    c.	
+    c.	lubusin/laravel-decomposer
     
-    d.	
+    d.	spatie/laravel-menu
     
-133. 
+133. dibawah ini beberapa frontend yang dapat kita gunakan untuk memberikan tampilan yang menarik untuk auth yang kita buat di laravel 6...
 
-    a.	
+    a.	bootstrap
     
-    b.	
+    b.	vue
     
-    c.	
+    c.	react
     
-    d.	
+    **d.	semua benar**
     
 ## Memverifikasi Email Setelah Registrasi
-134. 
+134. pada materi Memverifikasi Email Setelah Registrasi, kita dapat mengimplement sebuah interface pada model User, interface tersebut adalah...
 
-    a.	
+    a.	App
     
-    b.	
+    b.	Autenticatable
     
-    c.	
+    c.	Notifiable
     
-    d.	
+    **d.	MustVerifyEmail**
     
-135. 
+135. setelah kita mengimplement sebuah interface pada model User, selanjutanya kita menambahkan sebuah parameter pada Auth::routes, parameter tersebut adalah...
 
-    a.	
+    a.	['verifed' => true]
     
-    b.	
+    **b.	['verify' => true]**
     
-    c.	
+    c.	['verify', true]
     
-    d.	
+    d.	['verify' = true]
 
