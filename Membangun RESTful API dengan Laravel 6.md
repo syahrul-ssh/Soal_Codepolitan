@@ -142,7 +142,7 @@
     **d.  kernel.php**
 
 ## Read API Endpoint
-Pada materi Read API Endpoint, contoh code untuk menampilkan salah satu data dari tabel post, pada PostController.php adalah...
+13. Pada materi Read API Endpoint, contoh code untuk menampilkan salah satu data dari tabel post, pada PostController.php adalah...
 ```
 
     a.  public function show()
@@ -200,3 +200,128 @@ Pada materi Read API Endpoint, contoh code untuk menampilkan salah satu data dar
     
     d.  Semua salah
 
+## Add API Endpoint
+17. Berdasarkan materi Add API Endpoint, contoh code untuk menambahkan satu data ke tabel post, pada PostController.php adalah...
+```
+
+    a.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = Post($data);
+            return response()->json($response, 201);
+        }
+    
+    b.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = create($data);
+            return response()->json($response, 201);
+        }
+    
+    c.  public function store()
+        {
+            $data = $request->all();
+            $response = Post::create($data);
+            return response()->json($response, 201);
+        }
+    
+    **d.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = Post::create($data);
+            return response()->json($response, 201);
+        }**
+```
+
+18. Berdasarkan Materi Add API Endpoint, lengkapi titik titik yang ada pada code berikut `Route::post('/post', 'PostController@...');`
+
+    **a.  store**
+    
+    b.  show
+    
+    c.  index
+    
+    d.  update
+
+19. Apa arti dari status code 201 yang digunakan pada response yang telah dibuat...
+
+    a.  ok
+    
+    **b.  created**
+    
+    c.  accepted
+    
+    d.  reset content
+
+20. Pada aplikasi postman saat kita akan memasukan inputan yang akan kita masukan ke tabel database, kita bisa menggunakan tab...
+
+    **a.  body**
+    
+    b.  header
+    
+    c.  test
+    
+    d.  params
+
+## Edit API Endpoint
+21. Berdasarkan materi Add API Endpoint, contoh code untuk menambahkan satu data ke tabel post, pada PostController.php adalah...
+```
+
+    a.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = Post($data);
+            return response()->json($response, 201);
+        }
+    
+    b.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = create($data);
+            return response()->json($response, 201);
+        }
+    
+    c.  public function store()
+        {
+            $data = $request->all();
+            $response = Post::create($data);
+            return response()->json($response, 201);
+        }
+    
+    **d.  public function store(Request $request)
+        {
+            $data = $request->all();
+            $response = Post::create($data);
+            return response()->json($response, 201);
+        }**
+```
+
+22. Berdasarkan Materi Add API Endpoint, lengkapi titik titik yang ada pada code berikut `Route::post('/post', 'PostController@...');`
+
+    **a.  store**
+    
+    b.  show
+    
+    c.  index
+    
+    d.  update
+
+23. Apa arti dari status code 201 yang digunakan pada response yang telah dibuat...
+
+    a.  ok
+    
+    **b.  created**
+    
+    c.  accepted
+    
+    d.  reset content
+
+24. Pada aplikasi postman saat kita akan memasukan inputan yang akan kita masukan ke tabel database, kita bisa menggunakan tab...
+
+    **a.  body**
+    
+    b.  header
+    
+    c.  test
+    
+    d.  params
