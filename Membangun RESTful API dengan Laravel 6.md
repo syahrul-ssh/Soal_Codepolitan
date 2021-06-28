@@ -81,7 +81,8 @@
     **c.   git klon https://github.com/idstck/laravel-restapi.git restapi**
     
     d.   git cone https://github.com/idstck/laravel-restapi.git restapi
- 
+    
+# Bread Api Endpoint
 ## Browse API Endpoint
 9.  Pada pembuatan web services laravel menyediakan file route khusus yaitu...
 
@@ -396,3 +397,87 @@
     **c.  404**
     
     d.  403
+
+# Error Handling And Exception
+## Custom Response untuk Data Tidak Ditemukan
+29. Apa arti dari status code 404 yang digunakan pada response yang telah dibuat...
+
+    a.  ok
+    
+    b.  created
+    
+    c.  accepted
+    
+    **d.  Not Found**
+
+30. Berdasarkan materi Error Handling And Exception, lengkapilah titik titik pada code berikut `is_null(...)`
+
+    **a.  $data**
+    
+    b.  $post
+    
+    c.  $user
+    
+    d.  semua salah
+
+31. Berdasarkan materi Error Handling And Exception, lengkapilah titik titik pada code berikut `'...' => 'Resource not found!'`
+
+    a.  file
+    
+    b.  exception
+    
+    **c.  message**
+    
+    d.  trace
+
+32. Berdasarkan materi Error Handling And Exception, tipe data apa yang digunakan untuk response yang kita buat... 
+
+    a.  xml
+    
+    b.  javascript
+    
+    c.  text
+    
+    **d.  json**
+
+## Menambahkan Validasi beserta Responsenya
+33. Berdasarkan materi Menambahkan Validasi beserta Responsenya, lengkapilah titik titik pada code berikut ini `...::make`
+
+    a.  Validation
+    
+    **b.  Validator**
+    
+    c.  Validate
+    
+    d.  Valid
+
+34. Berdasarkan materi Menambahkan Validasi beserta Responsenya, lengkapilah titik titik pada code berikut ini `'...' => ['required', 'min:5']`
+
+    a.  body
+    
+    b.  user_id
+    
+    **c.  title**
+    
+    d.  id
+
+35. Berdasarkan materi Menambahkan Validasi beserta Responsenya, lengkapilah titik titik pada code berikut ini `$validator->...`
+
+    a.  fail()
+    
+    b.  failed()
+    
+    **c.  fails()**
+    
+    d.  semua salah
+
+36. Apa arti dari status code 400 yang digunakan pada response yang telah dibuat...
+
+    **a.  bad request**
+    
+    b.  created
+    
+    c.  accepted
+    
+    d.  not found
+
