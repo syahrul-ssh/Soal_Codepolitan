@@ -76,9 +76,9 @@
 
     a.   git clones https://github.com/idstck/laravel-restapi.git restapi
     
-    b.   git clone https://github.com/idstck/laravel-restapi.git restapi
+    **b.   git clone https://github.com/idstck/laravel-restapi.git restapi**
     
-    **c.   git klon https://github.com/idstck/laravel-restapi.git restapi**
+    c.   git klon https://github.com/idstck/laravel-restapi.git restapi
     
     d.   git cone https://github.com/idstck/laravel-restapi.git restapi
     
