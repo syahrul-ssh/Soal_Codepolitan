@@ -264,64 +264,135 @@
     d.  params
 
 ## Edit API Endpoint
-21. Berdasarkan materi Add API Endpoint, contoh code untuk menambahkan satu data ke tabel post, pada PostController.php adalah...
+21. Berdasarkan materi Edit API Endpoint, contoh code untuk mengedit satu data ke tabel post, pada PostController.php adalah...
 ```
 
-    a.  public function store(Request $request)
+    a.  public function (Request $request, Post $post)
+    
         {
-            $data = $request->all();
-            $response = Post($data);
-            return response()->json($response, 201);
+        
+            $post->update($request->all());
+            
+            return response()->json($post, 200);
+            
         }
     
-    b.  public function store(Request $request)
-        {
-            $data = $request->all();
-            $response = create($data);
-            return response()->json($response, 201);
-        }
+    **b.  public function update(Request $request, Post $post)
     
-    c.  public function store()
         {
-            $data = $request->all();
-            $response = Post::create($data);
-            return response()->json($response, 201);
-        }
-    
-    **d.  public function store(Request $request)
-        {
-            $data = $request->all();
-            $response = Post::create($data);
-            return response()->json($response, 201);
+        
+            $post->update($request->all());
+            
+            return response()->json($post, 200);
+            
         }**
+    
+    c.  public function update(Request $request)
+    
+        {
+        
+            $post->update($request->all());
+            
+            return response()->json($post, 200);
+            
+        }
+    
+    d.  public update(Request $request, Post $post)
+    
+        {
+        
+            $post->update($request->all());
+            
+            return response()->json($post, 200);
+            
+        }
 ```
 
-22. Berdasarkan Materi Add API Endpoint, lengkapi titik titik yang ada pada code berikut `Route::post('/post', 'PostController@...');`
+22. Berdasarkan Materi Edit API Endpoint, lengkapi titik titik yang ada pada code berikut `Route::...('/post/{post}', 'PostController@update');`
 
-    **a.  store**
+    a.  get
     
-    b.  show
+    b.  post
     
-    c.  index
+    **c.  put**
     
     d.  update
 
-23. Apa arti dari status code 201 yang digunakan pada response yang telah dibuat...
+23. Apa arti dari status code 200 yang digunakan pada response yang telah dibuat...
 
-    a.  ok
+    **a.  ok**
     
-    **b.  created**
+    b.  created
     
     c.  accepted
     
     d.  reset content
 
-24. Pada aplikasi postman saat kita akan memasukan inputan yang akan kita masukan ke tabel database, kita bisa menggunakan tab...
+24. Berdasarkan materi Edit API Endpoint, kita menambahkan sebuah parameter `Post $post` didalam function update yang kita buat, parameter tersebut adalah implementasi dari...
 
-    **a.  body**
+    a.  Migrations
     
-    b.  header
+    b.  API Resources
     
-    c.  test
+    c.  Eloquent
     
-    d.  params
+    **d.  Route Model Binding**
+
+## Delete API Endpoint
+25. Berdasarkan materi Delete API Endpoint, contoh code untuk Menghapus satu data ke tabel post, pada PostController.php adalah...
+```
+
+    a.  public function(Post $post)
+        {
+            $post->delete();
+            return response()->json(null, 200);
+        }
+    
+    b.  public destroy(Post $post)
+        {
+            $post->delete();
+            return response()->json(null, 200);
+        }
+    
+    **c.  public function destroy(Post $post)
+        {
+            $post->delete();
+            return response()->json(null, 200);
+        }**
+    
+    d.  public function destroy($post)
+        {
+            $post->delete();
+            return response()->json(null, 200);
+        }
+```
+
+26. Berdasarkan Materi Delete API Endpoint, lengkapi titik titik yang ada pada code berikut `Route::delete('/post/{post}', 'PostController@...');`
+
+    a.  get
+    
+    **b.  destroy**
+    
+    c.  put
+    
+    d.  update
+
+27. Kita bisa menghapus sebuah data pada object eloquent bisa menggunakan sebuah method berikut...
+
+    **a.  delete()**
+    
+    b.  post()
+    
+    c.  get()
+    
+    d.  update()
+
+28. Apa status code Http yang akan kita terima apabila kita menghapus sebuah data yang memang tidak ada...
+
+    a.  201
+    
+    b.  200
+    
+    **c.  404**
+    
+    d.  403
