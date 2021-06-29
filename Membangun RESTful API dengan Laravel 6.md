@@ -481,3 +481,147 @@
     
     d.  not found
 
+# Api Resource
+## Membuat Custom Response
+37. Pada laravel, kita bisa untuk tidak menampilkan/menyembunyikan sebuah atau beberapa kolom yang ada di tabel database dengan menggunakan property...
+
+    a.  $guarded
+    
+    **b.  $hidden**
+    
+    c.  $this
+    
+    d.  semua salah
+
+38. Berdasarkan materi Membuat Custom Response, kita dapat melakukan generating resources menggunakan perintah artisan...
+
+    a.  php artisan resource Post/PostResource
+    
+    b.  php make Post/PostResource
+    
+    c.  php artisan make:resource PostResource
+    
+    **d.  php artisan make:resource Post/PostResource**
+
+39. Berdasarkan materi Membuat Custom Response, lengkapilah titik titik pada code berikut ini `'stored_at' => $this->created_at->...`
+
+    **a.  diffForHumans()**
+    
+    b.  diffAsCarbonInterval()
+    
+    c.  diff()
+    
+    d.  diffInMonths()
+
+40. Berdasarkan materi Membuat Custom Response, lengkapilah titik titik pada code berikut ini `return new PostResource(...);`
+
+    **a.  $data**
+    
+    b.  $this
+    
+    c.  $post
+    
+    d.  $get
+
+41. Kita bisa membuat/mengubah property dengan property baru yang tidak ada di tabel database dengan...
+
+    a.  $hidden
+    
+    **b.  $appends**
+    
+    c.  $this
+    
+    d.  semua salah
+
+## Menggunakan Resource Collection
+42. kita disarankan untuk menggunakan resource collection saat...
+
+    **a.  Menampilkan banyak data, mengubah format, dan menambahkan metadata**
+    
+    b.  Menampilkan resource dalam suatu object
+    
+    c.  Menampilkan sebagian data
+    
+    d.  semua salah
+
+43. Berdasarkan materi Menggunakan Resource Collection, lengkapilah titik titik pada code berikut ini `php artisan make:resource Post/...`
+
+    a.  PostData
+    
+    b.  PostResource
+    
+    **c.  PostCollection**
+    
+    d.  PostGeneration
+
+44. Berdasarkan materi Menggunakan Resource Collection, lengkapilah titik titik pada code berikut ini `return new ...($data);`
+
+    a.  PostData
+    
+    b.  PostResource
+    
+    **c.  PostCollection**
+    
+    d.  PostGeneration
+
+45. Berdasarkan materi Menggunakan Resource Collection, lengkapilah titik titik pada code berikut ini `...::collection($this->collection),`
+
+    a.  PostData
+    
+    **b.  PostResource**
+    
+    c.  PostCollection
+    
+    d.  PostGeneration
+
+46. Berdasarkan materi Menggunakan Resource Collection, lengkapilah titik titik pada code berikut ini `$this->...->count()`
+
+    a.  generation
+    
+    b.  data
+    
+    c.  resource
+    
+    **d.  collection**
+
+## Membuat Response Pagination
+47. Salah satu dari keuntungan menggunakan resource collection pada laravel...
+
+    a.  dapat membuat loading pemanggilan data menjadi lebih lambat
+    
+    **b.  dapat membuat pagination dengan mudah**
+    
+    c.  Dapat memudahkan dalam memberi komentar
+    
+    d.  semua salah
+
+48. Berdasarkan materi Membuat Response Pagination, lengkapilah titik titik pada code berikut ini `$data = Post::...(4);`
+
+    **a.  paginate**
+    
+    b.  all
+    
+    c.  find
+    
+    d.  semua salah
+
+49. Pada saat kita menggunakan method paginate, secara otomatis laravel akan menggenerate property/data ... pada tampilan response di postman
+
+    a.  data
+    
+    b.  meta
+    
+    **c.  links**
+    
+    d.  semua salah
+
+50. Dibawah ini beberapa meta data yang terbuat saat kita membuat pagination di laravel...
+
+    a.  last_page
+    
+    b.  per_page
+    
+    c.  current_page
+    
+    **d.  semua benar**
+
