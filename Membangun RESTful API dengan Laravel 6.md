@@ -625,3 +625,54 @@
     
     **d.  semua benar**
 
+## Memuat Data Berelasi di API Resource
+51. Pada awal materi Memuat Data Berelasi di API Resource, kita memanggil method user di dalam PostResource, dibawah ini peroperty yang ditampilkan setelah kita memanggil method user tersebut, kecuali...
+
+    a.  id
+    
+    **b.  nama**
+    
+    c.  email
+    
+    d.  email_verified_at
+
+52. Berdasarkan materi Memuat Data Berelasi di API Resource, perintah artisan untuk membuat User Resource adalah...
+
+    a. php make:resource User/UserResource 
+    
+    b.  php artisan resource User/UserResource
+    
+    **c.  php artisan make:resource User/UserResource**
+    
+    d.  php artisan make:resource UserResource
+
+53. Berdasarkan Memuat Data Berelasi di API Resource, lengkapilah titik titik pada code berikut `'user' => new UserResource($this->...),`
+
+    a.  body
+    
+    b.  comment
+    
+    c.  post
+    
+    **d.  user**
+
+54. Berdasarkan Memuat Data Berelasi di API Resource, lengkapilah titik titik pada code berikut `DB::listen(function ($...)`
+
+    a.  eloquent
+    
+    **b.  query**
+    
+    c.  post
+    
+    d.  semua salah
+
+55. Berdasarkan Memuat Data Berelasi di API Resource, lengkapilah titik titik pada code berikut `Post::with(['...', ])->paginate(4);`
+
+    a.  body
+    
+    b.  comment
+    
+    c.  post
+    
+    **d.  user**
+
