@@ -676,3 +676,54 @@
     
     **d.  user**
 
+# Authentication
+## Menggunakan API Authentication Laravel
+56. Berdasarkan materi Menggunakan API Authentication Laravel, lengkapilah titik titik pada code berikut `php artisan make:... add_api_token_column_to_users_table`
+
+    a.  collection
+    
+    b.  resource
+    
+    **c.  migration**
+    
+    d.  mail
+
+57. Berdasarkan materi Menggunakan API Authentication Laravel, lengkapilah titik titik pada code berikut `$table->string('...', 80)->after('password')`
+
+    a.  remember_token
+    
+    **b.  api_token**
+    
+    c.  token
+    
+    d.  api
+
+58. Berdasarkan materi Menggunakan API Authentication Laravel, lengkapilah titik titik pada code berikut `'api_token' => Str::random(...)`
+
+    **a.  80**
+    
+    b.  30
+    
+    c.  50
+    
+    d.  45
+
+59. Berdasarkan materi Menggunakan API Authentication Laravel, lengkapilah titik titik pada code berikut `$this->...('auth:api');`
+
+    a.  resources
+    
+    b.  controller
+    
+    **c.  middleware**
+    
+    d.  semua salah
+
+60. response apa yang kita terima setelah kita mengimplementasikan API autentication, dan melakukan get pada data post tetapi kita tidak memiliki atau menyertakan sebuah token...
+
+    a.  "message": "Authenticated."
+    
+    b.  "message": "Succesfully"
+    
+    c.  "message": "Unsuccesfully"
+    
+    **d.  "message": "Unauthenticated."**
