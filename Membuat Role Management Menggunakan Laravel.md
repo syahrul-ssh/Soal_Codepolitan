@@ -89,3 +89,75 @@
     c.  $this->call(Laratrust::class);
     
     **d.  $this->call(LaratrustSeeder::class);**
+
+## Membuat Model Article beserta Factory
+10. Berdasarkan materi Membuat Model Article beserta Factory, kita membuat sebuah model untuk artikel menggunakan perintah artisan sebagai berikut...
+
+    a.  php make:model Article -mfs
+    
+    **b.  php artisan make:model Article -mfs**
+    
+    c.  php artisan model Article -mfs
+    
+    d.  php artisan make:model Article
+
+11. Berdasarkan materi Membuat Model Article beserta Factory, Pada file migration yang telah dibuat kita melakukan konfigurasi field apa saja yang akan kita buat pada table databasenya, berikut beberapa field yang dibuat, kecuali...
+
+    a.  published
+    
+    b.  title
+    
+    c.  body
+    
+    **d.  user**
+
+12. Berdasarkan materi Membuat Model Article beserta Factory, lengkapilah potongan code yang ada di ArticleFactory.php berikut 'title' => $...->sentence(4)
+
+    a.  call
+    
+    b.  factory
+    
+    **c.  faker**
+    
+    d.  semua salah
+    
+13. Berdasarkan materi Membuat Model Article beserta Factory, lengkapilah potongan code yang ada di ArticleSeeder.php berikut ...(Article::class, 20)->create();
+
+    a.  call
+    
+    **b.  factory**
+    
+    c.  faker
+    
+    d.  semua salah
+
+14. Berdasarkan materi Membuat Model Article beserta Factory, lengkapilah potongan code yang ada di DatabaseSeeder.php berikut $this->...(ArticleSeeder::class);
+
+    **a.  call**
+    
+    b.  factory
+    
+    c.  faker
+    
+    d.  semua salah
+
+15. Berdasarkan materi Membuat Model Article beserta Factory, lengkapilah potongan code yang ada di Article.php berikut return $this->...(User::class);
+
+    a. belongstoMany
+    
+    b.  belongs
+    
+    c.  hasMany
+    
+    **d.  belongsTo**
+    
+16. Berdasarkan materi Membuat Model Article beserta Factory, lengkapilah potongan code yang ada di User.php berikut return $this->...(Article::class);
+
+    a. belongsToMany
+    
+    b.  belongs
+    
+    **c.  hasMany**
+    
+    d.  belongsTo
+    
