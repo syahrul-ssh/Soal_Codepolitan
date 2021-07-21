@@ -161,3 +161,75 @@
     
     d.  belongsTo
     
+# Membuat Role Management
+## Membuat Component Blade Alert
+17. Berikut adalah contoh perintah artisan untuk membuat component alert...
+
+    a.  php make:component Alert
+    
+    **b.  php artisan make:component Alert**
+    
+    c.  artisan make:component Alert
+    
+    d.  php artisan component Alert
+
+18. Pada file alert.php yang telah kita buat menggunakan perintah artisan didalamnya kita menambahkan public property berikut...
+
+    **a.  $type & $message**
+    
+    b.  $get & $post
+    
+    c.  $guarded
+    
+    d.  semua salah
+
+19. Berdasarkan materi Membuat Component Blade Alert, pada file alert.php lengkapilah potongan code berikut $this->... = $type;
+
+    a.  tipe
+    
+    **b.  type**
+    
+    c.  message
+    
+    d.  view
+    
+20. Berdasarkan materi Membuat Component Blade Alert, pada file alert.php lengkapilah potongan code berikut $this->... = $message;
+
+    a.  tipe
+    
+    b.  type
+    
+    **c.  message**
+    
+    d.  view
+
+21. Berdasarkan materi Membuat Component Blade Alert, pada file alert.php lengkapilah potongan code berikut return ...('components.alert');
+
+    a.  tipe
+    
+    b.  type
+    
+    c.  message
+    
+    **d.  view**
+
+22. Berdasarkan materi Membuat Component Blade Alert, pada folder app kita membuat sebuah folder baru yang bernama Traits, di dalam folder Traits kita membuat sebuah file...
+
+    a.  flashAlert.php
+    
+    b.  Flashalert.php
+    
+    **c.  FlashAlert.php**
+    
+    d.  flashalert.php
+    
+23. Dibawah ini adalah beberapa method yang di buat di dalam file FlashAlert.php...
+
+    a.  alertDeleted()
+    
+    b.  alertCreated()
+    
+    c.  alertUpdated()
+    
+    **d.  semua benar**
+    
