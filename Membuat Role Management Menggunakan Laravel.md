@@ -233,3 +233,74 @@
     
     **d.  semua benar**
     
+## Membuat CRUD User
+24. Dibawah ini perintah untuk mengenerate UserController berdasarkan materi dari Membuat CRUD User...
+
+    a.  php artisan make:controller UserController --resource
+    
+    b.  php artisan make:controller Admin/UserController
+    
+    **c.  php artisan make:controller Admin/UserController --resource**
+    
+    d.  php artisan controller Admin/UserController --resource
+
+25. Pada file bernama UserController.php tepatnya pada method index, lengkapilah potongan code berikut $users = User::...(10);
+
+    a.  pagination
+    
+    **b.  paginate**
+    
+    c.  paginates
+    
+    d.  paginet
+
+26. Berdasarkan materi Membuat CRUD User, Pada file bernama index.blade.php, lengkapilah potongan code berikut `<... :type="session('type')" :message="session('message')"/>`
+
+    a.  z-alert
+    
+    b.  y-alert
+    
+    **c.  x-alert**
+    
+    d.  a-alert
+    
+27. Berdasarkan materi Membuat CRUD User, Pada file bernama create.blade.php, lengkapilah potongan code berikut {{ $...->display_name }}
+
+    a.  rule
+    
+    b.  roles
+    
+    **c.  role**
+    
+    d.  rules
+
+28. Berdasarkan materi Membuat CRUD User, Pada file bernama edit.blade.php, lengkapilah potongan code berikut {{$...->name}}
+
+    a.  use
+    
+    b.  users
+    
+    **c.  user**
+    
+    d.  used
+
+29. Berdasarkan materi Membuat CRUD User, Pada file bernama web.php, lengkapilah potongan code berikut Route::middleware(['...', 'role:superadmin'])
+
+    a.  semua salah
+    
+    b.  authenticate
+    
+    c.  authentication
+    
+    **d.  auth**
+    
+30. Berdasarkan materi Membuat CRUD User, Pada file bernama app.blade.php, lengkapilah potongan code berikut {{ ...('admin.user.index') }}
+
+    a.  routes
+    
+    **b.  route**
+    
+    c.  routing
+    
+    d.  rotation
+    
