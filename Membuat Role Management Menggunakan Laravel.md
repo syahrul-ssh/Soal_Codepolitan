@@ -304,3 +304,196 @@
     
     d.  rotation
     
+## Membuat CRUD Permission
+31. Dibawah ini perintah untuk mengenerate PermissionController berdasarkan materi dari Membuat CRUD Permission...
+
+    a.  php artisan make:controller PermissionController --resource
+    
+    b.  php artisan make:controller Admin/PermissionController
+    
+    **c.  php artisan make:controller Admin/PermissionController --resource**
+    
+    d.  php artisan controller Admin/PermissionController --resource
+
+32. Pada file bernama PermissionController.php, pada method create, lengkapilah potongan code berikut return view('pages.admin. ... .create');
+
+    a.  permit
+    
+    **b.  permission**
+    
+    c.  license
+    
+    d.  validate
+
+33. Pada file bernama PermissionController.php, pada method store, lengkapilah potongan code berikut $this->...($request, []);
+
+    a.  permit
+    
+    b.  permission
+    
+    c.  license
+    
+    **d.  validate**
+    
+34. Pada file bernama PermissionController.php, pada method edit, lengkapilah potongan code berikut $... = Permission::findOrFail($id);
+
+    a.  permit
+    
+    **b.  permission**
+    
+    c.  license
+    
+    d.  validate
+
+35. Berdasarkan materi Membuat CRUD Permission, Pada file bernama index.blade.php, lengkapilah potongan code berikut {{ ...('admin.permission.create') }}
+
+    a.  routes
+    
+    **b.  route**
+    
+    c.  routing
+    
+    d.  rotation
+
+36. Berdasarkan materi Membuat CRUD Permission, Pada file bernama create.blade.php, lengkapilah potongan code berikut {{ ...('name') }}
+
+    a.  teen
+    
+    b.  young
+    
+    **c.  old**
+    
+    d.  kid
+    
+37. Berdasarkan materi Membuat CRUD Permission, Pada file bernama web.php, lengkapilah potongan code berikut Route::...('permission', 'PermissionController');
+
+    a.  source
+    
+    b.  resources
+    
+    **c.  resource**
+    
+    d.  semua salah
+
+## Membuat CRUD Role
+38. Dibawah ini perintah untuk mengenerate RoleController berdasarkan materi dari Membuat CRUD Role...
+
+    a.  php artisan make:controller RoleController --resource
+    
+    b.  php artisan make:controller Admin/RoleController
+    
+    **c.  php artisan make:controller Admin/RoleController --resource**
+    
+    d.  php artisan controller Admin/RoleController --resource
+
+39. Berdasarkan materi Membuat CRUD Role, Pada file bernama RoleController.php, pada method store, lengkapilah potongan code berikut $role->...($request->input('permissions_id'));
+
+    a.  permissions
+    
+    **b.  attachPermissions**
+    
+    c.  forceDelete
+    
+    d.  attachpermission
+
+40. Berdasarkan materi Membuat CRUD Role, Pada file bernama RoleController.php, pada method edit, lengkapilah potongan code berikut $... = Permission::all();
+
+    **a.  permissions**
+    
+    b.  attachPermissions
+    
+    c.  forceDelete
+    
+    d.  syncPermissions
+    
+41. Berdasarkan materi Membuat CRUD Role, Pada file bernama RoleController.php, pada method update, lengkapilah potongan code berikut $role->...($request->input('permissions_id'));
+
+    a.  permissions
+    
+    b.  attachPermissions
+    
+    c.  forceDelete
+    
+    **d.  syncPermissions**
+
+42. Berdasarkan materi Membuat CRUD Role, Pada file bernama RoleController.php, pada method destroy, lengkapilah potongan code berikut $role->...();
+
+    a.  permissions
+    
+    b.  attachPermissions
+    
+    **c.  forceDelete**
+    
+    d.  syncPermissions
+
+43. Berdasarkan materi Membuat CRUD Role, Pada file bernama web.php, lengkapilah potongan code berikut Route::resource('...', 'RoleController');
+
+    **a.  role**
+    
+    b.  user
+    
+    c.  permission
+    
+    d.  article
+    
+## Membuat CRUD Article
+44. Dibawah ini perintah untuk mengenerate ArticleController berdasarkan materi dari Membuat CRUD Article...
+
+    **a.  php artisan make:controller ArticleController --resource**
+    
+    b.  php artisan make:controller Admin/ArticleController
+    
+    c.  php artisan make:controller Admin/ArticleController --resource
+    
+    d.  php artisan controller Admin/ArticleController --resource
+
+45. Berdasarkan materi Membuat CRUD Article, Pada file bernama ArticleController.php, pada method index, lengkapilah potongan code berikut $... = Article::paginate(10);
+
+    a.  roles
+    
+    b.  users
+    
+    c.  permissions
+    
+    **d.  articles**
+
+46. Berdasarkan materi Membuat CRUD Article, Pada file bernama ArticleController.php, pada method store, lengkapilah potongan code berikut return redirect()->route('article.index')->with($this->...());
+
+    a.  alertDeleted
+    
+    b.  alertUpdated
+    
+    **c.  alertCreated**
+    
+    d.  permissionDenied
+    
+47. Berdasarkan materi Membuat CRUD Article, Pada file bernama ArticleController.php, pada method update, lengkapilah potongan code berikut return redirect()->route('article.index')->with($this->...());
+
+    a.  alertDeleted
+    
+    **b.  alertUpdated**
+    
+    c.  alertCreated
+    
+    d.  permissionDenied
+
+48. Berdasarkan materi Membuat CRUD Article, Pada file bernama ArticleController.php, pada method destroy, lengkapilah potongan code berikut return redirect()->route('article.index')->with($this->...());
+
+    **a.  alertDeleted**
+    
+    b.  alertUpdated
+    
+    c.  alertCreated
+    
+    d.  permissionDenied
+
+49. Berdasarkan materi Membuat CRUD Article, Pada file bernama web.php, lengkapilah potongan code berikut Route::resource('...', 'ArticleController');
+
+    a.  role
+    
+    b.  user
+    
+    c.  permission
+    
+    **d.  article**
+    
