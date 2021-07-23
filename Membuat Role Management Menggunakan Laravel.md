@@ -497,3 +497,111 @@
     
     **d.  article**
     
+## Implementasi Role dan Permission di Controller
+50. Berdasarkan materi Implementasi Role dan Permission di Controller, Pada file bernama ArticleController.php, pada method edit, lengkapilah potongan code berikut request()->user()->hasRole(['...', 'admin'])
+
+    **a.  superadmin**
+    
+    b.  admin
+    
+    c.  user
+    
+    d.  semua salah
+
+51. Berdasarkan materi Implementasi Role dan Permission di Controller, Pada file bernama ArticleController.php, pada method edit, lengkapilah potongan code berikut request()->user()->isAbleToAndOwns('...', $article)
+
+    a.  articles-update
+    
+    b.  delete-articles
+    
+    **c.  update-articles**
+    
+    d.  articles
+
+52. Berdasarkan materi Implementasi Role dan Permission di Controller, Pada file bernama ArticleController.php, pada method destroy, lengkapilah potongan code berikut request()->user()->hasRole('...')
+
+    **a.  superadmin**
+    
+    b.  admin
+    
+    c.  user
+    
+    d.  semua salah
+
+53. Berdasarkan materi Implementasi Role dan Permission di Controller, Pada file bernama ArticleController.php, pada method destroy, lengkapilah potongan code berikut request()->user()->isAbleToAndOwns('...', $article)
+
+    a.  articles-update
+    
+    **b.  delete-articles**
+    
+    c.  update-articles
+    
+    d.  articles
+
+54. Berdasarkan materi Implementasi Role dan Permission di Controller, Pada file bernama index.blade.php, yang ada di folder view article, lengkapilah potongan code berikut {{ $article->user->... }}
+
+    a.  names
+    
+    **b.  name**
+    
+    c.  nama
+    
+    d.  semua salah
+
+55. Ketika kita login sebagai user, pesan apa yang akan ditampilkan apabila kita berusaha mengedit atau menghapus artikel yang kita tidak memiliki permissionnya...
+
+    a.  Something wrong!
+    
+    **b.  you don’t have permission to access!**
+    
+    c.  Data successfully updated!
+    
+    d.  Data not found!
+    
+## Implementasi Role dan Permission di Blade
+56. Berdasarkan materi Implementasi Role dan Permission di Blade, Kita dapat menghilangkan menu user, permission, dan role pada file blade, tepatnya pada file...
+
+    **a.  app.blade.php**
+    
+    b.  index.blade.php
+    
+    c.  menu.blade.php
+    
+    d.  nav.blade.php
+
+57. Berdasarkan materi Implementasi Role dan Permission di Blade, Kita dapat menghilangkan menu user, permission, dan role pada file blade, dengan menambahkan method menggunakan syntax blade, berikut methodnya...
+
+    **a.  @role()**
+    
+    b.  @roles()
+    
+    c.  @rules()
+    
+    d.  @rule()
+
+58. Berdasarkan materi Implementasi Role dan Permission di Blade, Pada file bernama edit.blade.php, yang ada di folder view article, lengkapilah potongan code berikut ...(['superadmin', 'admin'])
+
+    a.  @rules
+    
+    b.  @roles
+    
+    c.  @rule
+    
+    **d.  @role**
+    
+59. Apa nilai default dari data published yang dibuat pada course ini...
+
+    a.  true
+    
+    **b.  false**
+
+60. Ketika kita login sebagai user, pesan apa yang akan ditampilkan apabila kita sudah mengedit article yang kita sebagai user buat...
+
+    a.  Something wrong!
+    
+    b.  you don’t have permission to access!
+    
+    **c.  Data successfully updated!**
+    
+    d.  Data not found!
+    
